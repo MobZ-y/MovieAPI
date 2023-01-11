@@ -1,4 +1,4 @@
-const app = document.querySelector('.app')
+const tren = document.querySelector('.trending')
 let trending = [];
 
 
@@ -15,17 +15,16 @@ async function FetchYea() {
 
 
 function FetchDisplay() {
-app.innerHTML = trending.map((info) => 
+tren.innerHTML = trending.map((info) => 
     `
     <div class="card">
     <img src="https://image.tmdb.org/t/p/w500${info.poster_path
     }" alt="drapeau" > 
     <h2>${info.title === undefined ? info.name : info.title}</h2>
-    <p>${info.overview}</p>
     <h3>Note:${info.vote_average}</h3>
     </div>
   `
-)
+).join("")
 }
 
 

@@ -1,0 +1,19 @@
+
+
+.card {
+    flex: 1 0 20%;
+    min-width: 260px;
+    background: rgb(17, 17, 17);
+    margin: 5px;
+    width: 700px;
+    color: rgb(245, 245, 245);
+    border-radius: 20px;
+    padding: 20px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  img {
+    height: 700px;
+    width: 700px;
+    
+  }

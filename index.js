@@ -1,9 +1,9 @@
-const tren = document.querySelector('.trending')
+const tren = document.getElementById('trending')
 let trending = [];
 
 
 
-async function FetchYea() {
+async function FetchTREN() {
     await fetch('https://api.themoviedb.org/3/trending/all/day?api_key=dc4fa11dbb0888468121f0e93ac98077&page=1')
     .then((res) => res.json())
     .then((data) =>  trending = data.results);
@@ -12,6 +12,15 @@ async function FetchYea() {
     FetchDisplay()
 
 }
+async function FetchPeople() {
+    await fetch('https://api.themoviedb.org/3/person/287?api_key=dc4fa11dbb0888468121f0e93ac98077&language=en-US')
+    .then((res) => res.json())
+    .then((data) =>  people = data.name);
+
+    console.log(people);
+
+}
+
 
 
 function FetchDisplay() {
@@ -31,5 +40,6 @@ tren.innerHTML = trending.map((info) =>
 
 
 
-window.addEventListener('load',FetchYea() );
+window.addEventListener('load',FetchTREN(), FetchPeople() );
+
 

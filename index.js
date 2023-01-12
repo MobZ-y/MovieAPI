@@ -1,26 +1,47 @@
-const tren = document.getElementById('trending')
+const tren = document.getElementById('trending');
+const content = document.querySelector(".content");
 let trending = [];
+let peoplesearch = "Ana de Armas";
 
 
+async function FetchPeople() {
+    await fetch('https://api.themoviedb.org/3/search/person?api_key=dc4fa11dbb0888468121f0e93ac98077&language=en-US&query=' + peoplesearch)
+    .then((res) => res.json())
+    .then((data) =>  peoplesearch = data);
+
+    console.log(peoplesearch);
+    FetchDisplayPeople()
+}
+
+const inputSearch = document.getElementById("inputSearch")
+
+function FetchDisplayPeople() {
+    content.innerHTML = peoplesearch.filter((country) =>
+    country.results[0].name
+      .toLowerCase()
+      .includes(inputSearch.value.toLowerCase())
+  )
+    content.innerHTML = peoplesearch = 
+        `
+        <div class="card">
+        <h3>${peoplesearch.results[0].name}</h3>
+        </div>
+      `
+    
+
+}
+
+inputSearch.addEventListener("input",  FetchDisplayPeople);
 
 async function FetchTREN() {
     await fetch('https://api.themoviedb.org/3/trending/all/day?api_key=dc4fa11dbb0888468121f0e93ac98077&page=1')
     .then((res) => res.json())
     .then((data) =>  trending = data.results);
 
-    console.log(trending);
+
     FetchDisplay()
 
 }
-async function FetchPeople() {
-    await fetch('https://api.themoviedb.org/3/person/287?api_key=dc4fa11dbb0888468121f0e93ac98077&language=en-US')
-    .then((res) => res.json())
-    .then((data) =>  people = data.name);
-
-    console.log(people);
-
-}
-
 
 
 function FetchDisplay() {

@@ -6,7 +6,7 @@ const inputSearch = document.getElementById("inputSearch")
 
 
 let trending = [];
-let peoplesearch = "";
+let peoplesearch = "Ana de Armas";
 
 
 async function FetchPeople() {

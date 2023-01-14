@@ -1,7 +1,7 @@
 const tren = document.getElementById('trending');
 const content = document.querySelector(".content");
 const btn = document.querySelector("button")
-const topMovie = document.querySelector('.moviesTOP')
+const topMovie = document.querySelector('.movies-trending')
 const inputSearch = document.getElementById("inputSearch")
 
 
@@ -43,11 +43,12 @@ function FetchDisplayPeople() {
 
 inputSearch.addEventListener('input', (e) => {
   peoplesearch = e.target.value
-  FetchPeople()
+    FetchPeople()
 });
 
 btn.addEventListener("click", ()=>{
   topMovie.classList.add("visiblity");
+
   FetchDisplayPeople()
 })
 

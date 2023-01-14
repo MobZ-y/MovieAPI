@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style/index.css" />
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -15,20 +15,32 @@
   />
   </head>
   <body>
+    <header>
+      <nav>
+        <ul>
+          <a href="/index.html"><i class="fa-solid fa-house"></i></a>
+          <li>test 2</li>
+        </ul>
+        <ul>
+          <li>utilisateur</li>
+          <li>utilisateur</li>
+        </ul>
+      </nav>
+    </header>
     <div class="filter-container">
-      <input type="text" id="inputSearch" placeholder="Rechercher" />
-      <button>
+      <input type="text" id="inputSearch" placeholder="Rechercher, acteurs, réalisateur" />
+     <button>
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>
     </div>
     <div class="content"></div>
-    <div class="moviesTOP">
-      <h4>Trending Movies</h4>
+    <div class="movies-trending">
+      <h4>Populaires</h4>
       <div id="carousel">
         <div id="trending"></div>
       </div>
     </div>
 
-    <script src="/index.js"></script>
+    <script src="./style/index.js"></script>
   </body>
 </html>

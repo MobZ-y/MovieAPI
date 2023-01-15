@@ -1,5 +1,5 @@
 const trenTv = document.getElementById('trendingTv');
-const topTv = document.querySelector('.tv-trending')
+const topTv = document.querySelector('.tv-trending');
 
 let trendingTv = [];
 
@@ -20,11 +20,11 @@ function FetchDisplayTv() {
         <img src="https://image.tmdb.org/t/p/w500${info.poster_path
     }" alt="drapeau" > 
         <h2>${info.name}</h2>
-        <h3>Note:${info.vote_average === 0 ? "unrated " : info.vote_average}</h3>
+        <h3 class="${info.vote_average === 0 ? "" : (info.vote_average > 6 ? "green" : "red")}">${info.vote_average === 0 ? "unrated" : (info.vote_average * 10).toFixed(1)}</h3>
         </div>
       `
     ).join("")
-    }
+}
     
 
 window.addEventListener('load', FetchTV())

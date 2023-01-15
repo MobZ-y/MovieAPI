@@ -1,6 +1,6 @@
 .card {
   width: 300px;
-  height: 300px;
+  height: 290px;
   background: rgb(248, 248, 248);
   color: rgb(245, 245, 245);
   border-radius: 20px;
@@ -9,15 +9,31 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-align: center;
+  position: relative;
+
+  h3 {
+    color: rgb(247, 247, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    width: 20%;
+    height: 30px;
+    border-radius: 150px;
+    z-index: 100;
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    box-sizing: border-box;
+    bottom: 70px;;
+  }
+
 }
 
-h3 {
-  color: black;
-  font-size: 7px;
-}
+ 
 h2 {
   color: black;
-  font-size: 10px;
+  font-size: 15px;
 }
 img {
   min-height: calc(150px * 1.5);
@@ -138,4 +154,13 @@ button {
       margin-left: 13rem;
       color: rgb(238, 238, 238);
     }
+  }
+
+
+  .green {
+    background-color: rgb(2, 219, 2);
+  }
+  
+  .red {
+    background-color: rgb(207, 2, 2);
   }

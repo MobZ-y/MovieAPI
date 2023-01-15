@@ -48,6 +48,7 @@ inputSearch.addEventListener('input', (e) => {
 
 btn.addEventListener("click", ()=>{
   topMovie.classList.add("visiblity");
+  topTv.classList.add("visiblity");
 
   FetchDisplayPeople()
 })
@@ -70,16 +71,14 @@ tren.innerHTML = trending.map((info) =>
     <img src="https://image.tmdb.org/t/p/w500${info.poster_path
     }" alt="drapeau" > 
     <h2>${info.title === undefined ? info.name : info.title}</h2>
-    <h3>Note:${info.vote_average === 0 ? "unrated " : info.vote_average}</h3>
+    <h3 class="${info.vote_average === 0 ? "" : (info.vote_average > 6 ? "green" : "red")}">${info.vote_average === 0 ? "unrated" : (info.vote_average * 10).toFixed(1)}</h3>
     </div>
   `
+  
 ).join("")
 }
 
 
-
-
-
-window.addEventListener('load',FetchTREN(), FetchPeople() );
+window.addEventListener('load',FetchTREN(), FetchPeople(), );
 
 

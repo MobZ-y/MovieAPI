@@ -1,35 +1,48 @@
+.content {
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 0;
+  padding-bottom: 0;
 
-.famous-actors{
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-}
+  .famous-actors {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
 
-
-
-.card {
-    flex: 1 0 20%;
-    width: 235px;
-    margin: 5px;
+  .card {
+    flex: 1 0 5%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .card-famous {
+    width: 275px;
     color: rgb(53, 53, 53);
-    border-radius: 20px;
-    padding: 20px;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-      position: relative;
+    position: relative;
+    background-color: white;
 
+    .profile-famous img {
+      margin: 0;
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
 
-  img {
-    border-radius: 0;
-    width: 235px;
-    height: 235px;
-  }
+    .profile-meta {
+      justify-content: center;
+      font-size: 10px;
+      overflow: hidden;
 
-  h2{
-    position: absolute;
-    justify-content: center;
-    width: 235px;
-    background: rgb(255, 255, 255);
+      .sub{
+        white-space: nowrap;
+      }
+      
+      .name{
+       font-size: 20px;
+       font-weight: 600;
+      }
+    }
   }
 }
-  

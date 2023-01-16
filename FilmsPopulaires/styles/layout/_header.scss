@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  a{
+    text-decoration: none;
+    color: rgb(243, 243, 243);
+  }
+  
+  .wrapper{
+    margin: 0 auto;
+    width: 1000px;
+  }
+  
+  header{
+    border-bottom: 1px solid #eee;
+    background: rgb(0, 0, 136);
+  }
+  header li{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+  }
+  
+  header li a{
+    display: block;
+    padding: 20px;
+  }
+  
+  header li a:hover{
+  background: rgb(51, 51, 51);
+  color: #fff;
+  }
+  
+  header li:hover .sub-menu{
+    display: block;
+    background: rgb(61, 61, 61);
+    }
+  
+  .sub-menu{
+    display: none;
+    position: absolute;
+    background-color: aqua;
+    width: 200px;
+  }

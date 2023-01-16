@@ -15,20 +15,37 @@
   />
 </head>
 <body>
-    <header>
-        <nav>
-          <ul>
-            <a href="/index.html"><i class="fa-solid fa-house"></i></a>
-            <a href="/Artistes/artistes.html"><li>Artistes</li></a>
+  <header>
+    <nav class="wrapper">
+      <ul>
+        <li>
+          <a href="/index.html">accueil</a>
+        </li>
+        <li>
+          <a href="">Films</a>
+          <ul class="sub-menu">
+            <li><a href="/FilmsPopulaires/filmsPopulaires.html">Films du Moment</a></li>
+            <li><a href="/Artistes/artistes.html">Films à venir</a></li>
           </ul>
-          <ul>
-            <li>utilisateur</li>
-            <li>utilisateur</li>
+        </li>
+        <li>
+          <a href="">Artistes</a>
+          <ul class="sub-menu">
+            <li><a href="/Artistes/artistes.html">Artistes populaires</a></li>
           </ul>
-        </nav>
-      </header>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- <a href="/index.html"><i class="fa-solid fa-house"></i></a> -->
+  </header>
     <div class="content">
     <div class="famous-actors"></div>
+    <div class="pages">
+        <button class="previous">previous</button>
+        <h2 class="count"></h2>
+        <button class="next">next</button>
+    </div>
 </div>
 
 

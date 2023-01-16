@@ -10,6 +10,7 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-align: center;
   position: relative;
+  
 
   h3 {
     color: rgb(247, 247, 247);
@@ -25,7 +26,7 @@
     width: 38px;
     height: 38px;
     box-sizing: border-box;
-    bottom: 70px;;
+    bottom: 70px;
   }
 
 }
@@ -117,7 +118,7 @@ button {
   padding: 20px;
 }
 .visiblity {
-  visibility: hidden;
+  display: none;
 }
 
 

@@ -16,17 +16,29 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="wrapper">
         <ul>
-          <a href="/index.html"><i class="fa-solid fa-house"></i></a>
-          <a href="/Artistes/artistes.html"><li>Artistes</li></a>
-        </ul>
-        <ul>
-          <li>utilisateur</li>
-          <li>utilisateur</li>
+          <li>
+            <a href="/index.html">accueil</a>
+          </li>
+          <li>
+            <a href="">Films</a>
+            <ul class="sub-menu">
+              <li><a href="/FilmsPopulaires/filmsPopulaires.html">Films du Moment</a></li>
+              <li><a href="/Artistes/artistes.html">Films à venir</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">Artistes</a>
+            <ul class="sub-menu">
+              <li><a href="/Artistes/artistes.html">Artistes populaires</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </header>
+
+
     <div class="filter-container">
       <input type="text" id="inputSearch" placeholder="Rechercher, acteurs, réalisateur" />
      <button>
@@ -35,13 +47,13 @@
     </div>
     <div class="content"></div>
     <div class="movies-trending">
-      <h4>Populaires Films</h4>
+      <h4>Tendances</h4>
       <div id="carousel">
         <div id="trending"></div>
       </div>
     </div>
     <div class="tv-trending">
-      <h4>Populaires Tv</h4>
+      <h4>Tendances Tv</h4>
       <div id="carouseltv">
         <div id="trendingTv"></div>
       </div>

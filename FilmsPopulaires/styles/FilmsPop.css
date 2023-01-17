@@ -37,6 +37,7 @@ header li {
   display: inline-block;
   vertical-align: top;
   position: relative;
+  z-index: 100;
 }
 
 header li a {
@@ -59,4 +60,53 @@ header li:hover .sub-menu {
   position: absolute;
   background-color: aqua;
   width: 200px;
+}
+
+.content-popular {
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+}
+.content-popular .famous-movies {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.content-popular .card {
+  flex: 1 0 1%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.content-popular .card-popular {
+  width: 225px;
+  height: 300px;
+  margin: 5px;
+  color: rgb(53, 53, 53);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  position: relative;
+}
+.content-popular .card-popular .profile-popular img {
+  margin: 0;
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.content-popular .card-popular .profile-meta {
+  justify-content: center;
+  font-size: 10px;
+  overflow: hidden;
+}
+.content-popular .card-popular .profile-meta .name {
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.form {
+  background-color: grey;
+  width: 500px;
+  margin-top: 50px;
 }/*# sourceMappingURL=FilmsPop.css.map */

@@ -20,11 +20,13 @@
     display: inline-block;
     vertical-align: top;
     position: relative;
+    z-index: 100;
   }
   
   header li a{
     display: block;
     padding: 20px;
+
   }
   
   header li a:hover{

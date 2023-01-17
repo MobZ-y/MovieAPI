@@ -22,6 +22,7 @@ header li{
   display: inline-block;
   vertical-align: top;
   position: relative;
+  z-index: 100;
 }
 
 header li a{

@@ -8,12 +8,14 @@
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+    margin-top: 30px;
   }
 
   .card {
     flex: 1 0 5%;
-    margin-top: 50px;
+    margin-top: 5px;
     margin-bottom: 50px;
+    
   }
   .card-famous {
     width: 275px;
@@ -22,11 +24,12 @@
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     position: relative;
     background-color: white;
+    box-shadow: -7px 8px 17px 0px rgba(0,0,0,0.75);
+
 
     .profile-famous img {
-      margin: 0;
       width: 100%;
-      height: 250px;
+      height: 260px;
       object-fit: cover;
     }
 
@@ -44,6 +47,25 @@
        font-weight: 600;
        white-space: nowrap;
       }
+    }
+  }
+}
+
+.pages{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  button{
+    padding: 10px;
+    width: 100px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+    margin: 0px 30px;
+
+    &:hover{
+      transform: scale(1.2);
     }
   }
 }

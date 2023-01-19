@@ -7,39 +7,48 @@ const inputSearch = document.getElementById("inputSearch")
 
 let trending = [];
 let peoplesearch = "Ana de Armas";
+let idPeople = "";
+let People = "";
 
 
 async function FetchPeople() {
     await fetch('https://api.themoviedb.org/3/search/person?api_key=dc4fa11dbb0888468121f0e93ac98077&language=en-US&query=' + peoplesearch)
     .then((res) => res.json())
-    .then((data) =>  peoplesearch = data);
+    .then((data) =>  idPeople = data.results[0].id);
 
-    console.log(peoplesearch);
+    console.log(idPeople);
+    FetchPeopleDetails() 
+    
 }
 
 
+async function FetchPeopleDetails() {
+  await fetch("https://api.themoviedb.org/3/person/" + idPeople + "?api_key=dc4fa11dbb0888468121f0e93ac98077&language=en-US&query=")
+  .then((res) => res.json())
+  .then((data) =>  People = data);
+
+
+  console.log(People)
+}
+
+ 
 
 function FetchDisplayPeople() {
-    content.innerHTML = peoplesearch = 
+    content.innerHTML = People = 
         `
         <div class="search">
         <div class="Profile">
-        <img src="https://image.tmdb.org/t/p/w500${peoplesearch.results[0].profile_path
+        <img src="https://image.tmdb.org/t/p/w500${People.profile_path
     }" alt="drapeau" id="pp"> 
     </div>
         <div class="KnowFor">
-        <h3>${peoplesearch.results[0].name}</h3>
-        <h4>Connu pour :</h4>
-        <img src="https://image.tmdb.org/t/p/w500${peoplesearch.results[0].known_for[0].poster_path
-      }" alt="poster" >
-      <img src="https://image.tmdb.org/t/p/w500${peoplesearch.results[0].known_for[1].poster_path
-    }" alt="poster" >
-    <img src="https://image.tmdb.org/t/p/w500${peoplesearch.results[0].known_for[2].poster_path
-  }" alt="poster" >
+        <h3>${People.name}</h3>
+        <p>${People.biography}</p>
         </div>
         </div>
       `
 };
+
 
 inputSearch.addEventListener('input', (e) => {
   peoplesearch = e.target.value

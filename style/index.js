@@ -1,4 +1,4 @@
-const tren = document.getElementById('trending');
+const tren = document.querySelector('.trending');
 const content = document.querySelector(".content");
 const btn = document.querySelector("button")
 const topMovie = document.querySelector('.movies-trending')
@@ -68,10 +68,17 @@ function FetchDisplay() {
 tren.innerHTML = trending.map((info) => 
     `
     <div class="card">
+    <div class="card-popular">
+    <div class="profile-popular">
     <img src="https://image.tmdb.org/t/p/w500${info.poster_path
-    }" alt="drapeau" > 
-    <h2>${info.title === undefined ? info.name : info.title}</h2>
-    <h3 class="${info.vote_average === 0 ? "" : (info.vote_average > 6 ? "green" : "red")}">${info.vote_average === 0 ? "unrated" : (info.vote_average * 10).toFixed(1)}</h3>
+}" alt="photo de ${info.name}" > 
+</div>
+<div class="profile-meta">
+    <p class="name">${info.name === undefined ? info.title : info.name}</p>
+    <p class="sub"${info.vote_average === 0 ? "" : (info.vote_average > 6 ? "green" : "red")}">${info.vote_average === 0 ? "unrated" : (info.vote_average * 10).toFixed(1)}</p>
+    </div>
+    </div>
+    </div>
     </div>
   `
   

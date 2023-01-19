@@ -15,8 +15,8 @@ a{
 }
 
 header{
-  border-bottom: 1px solid #eee;
-  background: rgb(0, 0, 136);
+  border-bottom: 1px solid rgb(88, 88, 88);
+  background: rgb(77, 77, 77);
 }
 header li{
   display: inline-block;
@@ -46,3 +46,4 @@ header li:hover .sub-menu{
   background-color: aqua;
   width: 200px;
 }
+

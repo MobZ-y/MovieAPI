@@ -11,7 +11,7 @@ li {
 }
 
 body {
-  background-color: rgb(154, 201, 255);
+  background-color: rgb(234, 244, 255);
 }
 
 * {
@@ -29,8 +29,8 @@ a {
 }
 
 header {
-  border-bottom: 1px solid #eee;
-  background: rgb(0, 0, 136);
+  border-bottom: 1px solid rgb(88, 88, 88);
+  background: rgb(77, 77, 77);
 }
 
 header li {
@@ -62,53 +62,64 @@ header li:hover .sub-menu {
   width: 200px;
 }
 
+.movies-trending {
+  margin: 30px auto;
+}
+
 .card {
-  width: 300px;
-  height: 290px;
-  background: rgb(248, 248, 248);
-  color: rgb(245, 245, 245);
-  border-radius: 20px;
-  margin: 5px;
-  padding: 10px;
+  margin: 10px;
+  width: 275px;
+}
+
+.card-popular {
+  color: rgb(53, 53, 53);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-align: center;
   position: relative;
 }
-.card h3 {
-  color: rgb(247, 247, 247);
-  display: flex;
+.card-popular .profile-popular {
+  width: 150px;
+  height: 225px;
+}
+.card-popular .profile-popular img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+.card-popular .profile-meta {
   justify-content: center;
-  align-items: center;
   font-size: 10px;
-  width: 20%;
-  height: 30px;
-  border-radius: 150px;
-  z-index: 100;
-  position: absolute;
-  width: 38px;
-  height: 38px;
-  box-sizing: border-box;
-  bottom: 70px;
+}
+.card-popular .profile-meta .name {
+  font-weight: 700;
+  font-weight: 600;
+  word-wrap: break-word;
 }
 
-h2 {
-  color: black;
-  font-size: 15px;
+.carousel {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.carousel .trending {
+  display: flex;
+  width: 100%;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+}
+.carousel .slide {
+  width: 100%;
+  scroll-snap-align: start;
 }
 
-img {
-  min-height: 208.5px;
-  height: 208.5px;
-  border-radius: 5px;
-}
-
-#carousel {
+.carouseltv {
   width: 80%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-#trending {
+.trendingTv {
   display: flex;
   width: 100%;
   -ms-scroll-snap-type: x mandatory;
@@ -122,20 +133,8 @@ img {
   scroll-snap-align: start;
 }
 
-#scrollbar {
-  width: 100%;
-  height: 10px;
-  background: #ccc;
-  position: relative;
-}
-
-.movies-trending {
+.tv-trending {
   margin: 30px auto;
-}
-.movies-trending h4 {
-  font-size: 30px;
-  margin-left: 13rem;
-  color: rgb(238, 238, 238);
 }
 
 .search {
@@ -184,42 +183,6 @@ button {
 
 .visiblity {
   display: none;
-}
-
-#carouseltv {
-  width: 80%;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-#trendingTv {
-  display: flex;
-  width: 100%;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  overflow-x: scroll;
-}
-
-.slide {
-  width: 100%;
-  scroll-snap-align: start;
-}
-
-#scrollbar {
-  width: 100%;
-  height: 10px;
-  background: #ccc;
-  position: relative;
-}
-
-.tv-trending {
-  margin: 30px auto;
-}
-.tv-trending h4 {
-  font-size: 30px;
-  margin-left: 13rem;
-  color: rgb(238, 238, 238);
 }
 
 .green {

@@ -1,53 +1,70 @@
-.card {
-  width: 300px;
-  height: 290px;
-  background: rgb(248, 248, 248);
-  color: rgb(245, 245, 245);
-  border-radius: 20px;
-  margin: 5px;
-  padding: 10px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  text-align: center;
-  position: relative;
+
+//*******MOVIES TREN************
+.movies-trending {
+  margin: 30px auto;}
   
 
-  h3 {
-    color: rgb(247, 247, 247);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 10px;
-    width: 20%;
-    height: 30px;
-    border-radius: 150px;
-    z-index: 100;
-    position: absolute;
-    width: 38px;
-    height: 38px;
-    box-sizing: border-box;
-    bottom: 70px;
+  
+
+  .card{
+    margin: 10px;
+    width: 275px;
   }
 
-}
+  .card-popular {
+    color: rgb(53, 53, 53);
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    position: relative;
 
- 
-h2 {
-  color: black;
-  font-size: 15px;
-}
-img {
-  min-height: calc(139px * 1.5);
-  height: calc(139px * 1.5);
-  border-radius: 5px;
-}
+    .profile-popular  {
+      width: calc(100px * 1.5);
+      height: calc(150px * 1.5);
+      
 
-#carousel {
+      img{
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    .profile-meta {
+      justify-content: center;
+      font-size: 10px;
+
+      .name {
+        font-weight: 700;
+        font-weight: 600;
+        word-wrap: break-word;
+      }
+    }
+  }
+  .carousel {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .trending {
+      display: flex;
+      width: 100%;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      overflow-x: scroll;
+    }
+    .slide {
+      width: 100%;
+      scroll-snap-align: start;
+    }
+  }
+
+///*******************TV*****************///
+.carouseltv {
   width: 80%;
   margin: 0 auto;
   overflow: hidden;
 }
-#trending {
+.trendingTv {
   display: flex;
   width: 100%;
   scroll-snap-type: x mandatory;
@@ -59,21 +76,9 @@ img {
   scroll-snap-align: start;
 }
 
-#scrollbar {
-  width: 100%;
-  height: 10px;
-  background: #ccc;
-  position: relative;
-}
 
-.movies-trending {
+.tv-trending {
   margin: 30px auto;
-
-  h4 {
-    font-size: 30px;
-    margin-left: 13rem;
-    color: rgb(238, 238, 238);
-  }
 }
 
 .search {
@@ -122,46 +127,10 @@ button {
 }
 
 
+.green {
+  background-color: rgb(2, 219, 2);
+}
 
-#carouseltv {
-    width: 80%;
-    margin: 0 auto;
-    overflow: hidden;
-  }
-  #trendingTv {
-    display: flex;
-    width: 100%;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    overflow-x: scroll;
-  }
-  .slide {
-    width: 100%;
-    scroll-snap-align: start;
-  }
-  
-  #scrollbar {
-    width: 100%;
-    height: 10px;
-    background: #ccc;
-    position: relative;
-  }
-  
-  .tv-trending {
-    margin: 30px auto;
-  
-    h4 {
-      font-size: 30px;
-      margin-left: 13rem;
-      color: rgb(238, 238, 238);
-    }
-  }
-
-
-  .green {
-    background-color: rgb(2, 219, 2);
-  }
-  
-  .red {
-    background-color: rgb(207, 2, 2);
-  }
+.red {
+  background-color: rgb(207, 2, 2);
+}

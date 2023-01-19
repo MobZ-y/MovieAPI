@@ -38,7 +38,7 @@
       </nav>
     </header>
 
-
+<main>
     <div class="filter-container">
       <input type="text" id="inputSearch" placeholder="Rechercher, acteurs, réalisateur" />
      <button>
@@ -47,17 +47,18 @@
     </div>
     <div class="content"></div>
     <div class="movies-trending">
-      <h4>Tendances</h4>
-      <div id="carousel">
-        <div id="trending"></div>
+      <h4>Populaires</h4>
+      <div class="carousel">
+        <div class="trending"></div>
       </div>
     </div>
     <div class="tv-trending">
-      <h4>Tendances Tv</h4>
-      <div id="carouseltv">
-        <div id="trendingTv"></div>
+      <h4>Populaires Tv</h4>
+      <div class="carouseltv scrollbar">
+        <div class="trendingTv"></div>
       </div>
     </div>
+  </main>
     <script src="./style/index.js"></script>
     <script src="./style/tv.js"></script>
   </body>

@@ -24,7 +24,7 @@ function FetchDisplayTv() {
 </div>
 <div class="profile-meta">
     <p class="name">${info.name === undefined ? info.title : info.name}</p>
-    <p class="sub"${info.vote_average === 0 ? "" : (info.vote_average > 6 ? "green" : "red")}">${info.vote_average === 0 ? "unrated" : (info.vote_average * 10).toFixed(1)}</p>
+    <div id="canvas" class="${info.vote_average === 0 ? "" : (info.vote_average > 6 ? "green" : "red")}">${info.vote_average === 0 ? "unrated" : (info.vote_average * 10).toFixed(1)}</div></div>
     </div>
     </div>
     </div>
@@ -33,6 +33,7 @@ function FetchDisplayTv() {
     ).join("")
 }
     
+
 
 // `
 // <div class="card"> 

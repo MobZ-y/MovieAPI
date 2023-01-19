@@ -1,11 +1,8 @@
 
-//*******MOVIES TREN************
+//*******MOVIES TREN + card effect for TV & Movies************
 .movies-trending {
   margin: 30px auto;}
   
-
-  
-
   .card{
     margin: 10px;
     width: 275px;
@@ -15,7 +12,6 @@
     color: rgb(53, 53, 53);
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    position: relative;
 
     .profile-popular  {
       width: calc(100px * 1.5);
@@ -32,6 +28,7 @@
     .profile-meta {
       justify-content: center;
       font-size: 10px;
+      position: relative;
 
       .name {
         font-weight: 700;
@@ -40,6 +37,8 @@
       }
     }
   }
+
+//******Carrousel tendances*******//
   .carousel {
     width: 80%;
     margin: 0 auto;
@@ -58,7 +57,7 @@
     }
   }
 
-///*******************TV*****************///
+///*******************Carrousel TV*****************///
 .carouseltv {
   width: 80%;
   margin: 0 auto;
@@ -80,7 +79,19 @@
 .tv-trending {
   margin: 30px auto;
 }
+//****CANVAS****/
+#canvas {
+  border: 1px solid black;
+  border-radius: 150px;
+  position: absolute;
+  top: -29px;
+  left: -1px;
+  z-index: 1000;
+  width: 30px;
+  height: 30px;
+}
 
+//**************Search****************/
 .search {
   display: flex;
   justify-content: center;
@@ -122,6 +133,13 @@ button {
 .KnowFor img {
   padding: 20px;
 }
+
+//**************Search****************/
+
+
+
+
+//*************Utility******************/
 .visiblity {
   display: none;
 }
@@ -134,3 +152,5 @@ button {
 .red {
   background-color: rgb(207, 2, 2);
 }
+
+//*************Utility******************/

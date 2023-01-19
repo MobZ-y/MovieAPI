@@ -74,7 +74,6 @@ header li:hover .sub-menu {
 .card-popular {
   color: rgb(53, 53, 53);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  position: relative;
 }
 .card-popular .profile-popular {
   width: 150px;
@@ -88,6 +87,7 @@ header li:hover .sub-menu {
 .card-popular .profile-meta {
   justify-content: center;
   font-size: 10px;
+  position: relative;
 }
 .card-popular .profile-meta .name {
   font-weight: 700;
@@ -135,6 +135,17 @@ header li:hover .sub-menu {
 
 .tv-trending {
   margin: 30px auto;
+}
+
+#canvas {
+  border: 1px solid black;
+  border-radius: 150px;
+  position: absolute;
+  top: -29px;
+  left: -1px;
+  z-index: 1000;
+  width: 30px;
+  height: 30px;
 }
 
 .search {

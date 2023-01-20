@@ -4,12 +4,6 @@
   margin: 30px auto;
 }
 
-h4{
-  margin-left: 150px;
-  margin-top: 20px;
-  font-size: 25px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
 .card{
     margin: 10px;
     width: 275px;
@@ -67,23 +61,6 @@ h4{
     }
   }
 
-///*******************Carrousel TV*****************///
-// .carouseltv {
-//   width: 80%;
-//   margin: 0 auto;
-//   overflow: hidden;
-// }
-// .trendingTv {
-//   display: flex;
-//   width: 100%;
-//   scroll-snap-type: x mandatory;
-//   -webkit-overflow-scrolling: touch;
-//   overflow-x: scroll;
-// }
-// .slide {
-//   width: 100%;
-//   scroll-snap-align: start;
-// }
 
 
 //****CANVAS****/
@@ -123,4 +100,14 @@ h4{
 
 .Switch{
   display: flex;
+  width: 180px;
+  border-radius: 50px;
+  margin-left: 150px;
+  margin-top: 20px;
+  font-size: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border: solid 2px black;
+  h3{
+    padding: 10px;
+  }
 }

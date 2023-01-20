@@ -123,11 +123,13 @@ async function FetchTV() {
 window.addEventListener("load", FetchTREN(), FetchPeople(), FetchTV());
 
 TVswitch.addEventListener("click", (e) => {
+  e.preventDefault();
   trending = trendingTv;
   FetchTV();
 });
 
 Tend.addEventListener("click", (e) => {
+  e.preventDefault();
   trendingTV = trending;
   FetchTREN();
 });

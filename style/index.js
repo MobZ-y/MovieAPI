@@ -1,99 +1,107 @@
-const tren = document.querySelector('.trending');
+const tren = document.querySelector(".trending");
 const content = document.querySelector(".content");
-const btn = document.querySelector("button")
-const topMovie = document.querySelector('.movies-trending')
-const inputSearch = document.getElementById("inputSearch")
-
+const btn = document.querySelector("button");
+const topMovie = document.querySelector(".movies-trending");
+const inputSearch = document.getElementById("inputSearch");
 
 let trending = [];
 let peoplesearch = "Ana de Armas";
 let idPeople = "";
 let People = "";
-
+let date1 = new Date();
+console.log(date1);
 
 async function FetchPeople() {
-    await fetch('https://api.themoviedb.org/3/search/person?api_key=dc4fa11dbb0888468121f0e93ac98077&language=en-US&query=' + peoplesearch)
+  await fetch(
+    "https://api.themoviedb.org/3/search/person?api_key=dc4fa11dbb0888468121f0e93ac98077&language=en-US&query=" +
+      peoplesearch
+  )
     .then((res) => res.json())
-    .then((data) =>  idPeople = data.results[0].id);
+    .then((data) => (idPeople = data.results[0].id));
 
-    console.log(idPeople);
-    FetchPeopleDetails() 
-    
+  console.log(idPeople);
+  FetchPeopleDetails();
 }
-
 
 async function FetchPeopleDetails() {
-  await fetch("https://api.themoviedb.org/3/person/" + idPeople + "?api_key=dc4fa11dbb0888468121f0e93ac98077&language=en-US&query=")
-  .then((res) => res.json())
-  .then((data) =>  People = data);
+  await fetch(
+    "https://api.themoviedb.org/3/person/" +
+      idPeople +
+      "?api_key=dc4fa11dbb0888468121f0e93ac98077&language=en-US&query="
+  )
+    .then((res) => res.json())
+    .then((data) => (People = data));
 
-
-  console.log(People)
+  console.log(People);
 }
 
- 
-
 function FetchDisplayPeople() {
-    content.innerHTML = People = 
-        `
+  content.innerHTML = People = `
         <div class="search">
         <div class="Profile">
-        <img src="https://image.tmdb.org/t/p/w500${People.profile_path
-    }" alt="drapeau" id="pp"> 
+        <img src="https://image.tmdb.org/t/p/w500${
+          People.profile_path
+        }" alt="drapeau" id="pp"> 
+        <p>Age :${People.birthday - date1} </p>
     </div>
-        <div class="KnowFor">
+        <div class="Details">
         <h3>${People.name}</h3>
         <p>${People.biography}</p>
         </div>
         </div>
-      `
-};
+      `;
+  id = "";
+}
 
-
-inputSearch.addEventListener('input', (e) => {
-  peoplesearch = e.target.value
-    FetchPeople()
+inputSearch.addEventListener("input", (e) => {
+  peoplesearch = e.target.value;
+  FetchPeople();
 });
 
-btn.addEventListener("click", ()=>{
+btn.addEventListener("click", () => {
   topMovie.classList.add("visiblity");
   topTv.classList.add("visiblity");
 
-  FetchDisplayPeople()
-})
-
+  FetchDisplayPeople();
+});
 
 async function FetchTREN() {
-    await fetch('https://api.themoviedb.org/3/trending/all/day?api_key=dc4fa11dbb0888468121f0e93ac98077&page=1')
+  await fetch(
+    "https://api.themoviedb.org/3/trending/all/day?api_key=dc4fa11dbb0888468121f0e93ac98077&page=1"
+  )
     .then((res) => res.json())
-    .then((data) =>  trending = data.results);
+    .then((data) => (trending = data.results));
 
-
-    FetchDisplay()
+  FetchDisplay();
 }
 
-
 function FetchDisplay() {
-tren.innerHTML = trending.map((info) => 
-    `
+  tren.innerHTML = trending
+    .map(
+      (info) =>
+        `
     <div class="card">
     <div class="card-popular">
     <div class="profile-popular">
-    <img src="https://image.tmdb.org/t/p/w500${info.poster_path
-}" alt="photo de ${info.name}" > 
+    <img src="https://image.tmdb.org/t/p/w500${
+      info.poster_path
+    }" alt="photo de ${info.name}" > 
 </div>
 <div class="profile-meta">
     <p class="name">${info.name === undefined ? info.title : info.name}</p>
-    <div id="canvas" class="${info.vote_average === 0 ? "" : (info.vote_average > 6 ? "green" : "red")}">${info.vote_average === 0 ? "unrated" : (info.vote_average * 10).toFixed(1)}</div></div>
+    <div id="canvas" class="${
+      info.vote_average === 0 ? "" : info.vote_average > 6 ? "green" : "red"
+    }">${
+          info.vote_average === 0
+            ? "unrated"
+            : (info.vote_average * 10).toFixed(1)
+        }</div></div>
     </div>
     </div>
     </div>
   `
-  
-).join("")
+    )
+    .join("");
 }
 
-
-window.addEventListener('load',FetchTREN(), FetchPeople(), );
-
-
+window.addEventListener("load", FetchTREN(), FetchPeople());

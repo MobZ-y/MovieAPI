@@ -4,6 +4,7 @@ const btn = document.querySelector("button");
 const topMovie = document.querySelector(".movies-trending");
 const inputSearch = document.getElementById("inputSearch");
 const TVswitch = document.getElementById("TV");
+const TendancesSwitch = document.getElementById("Tend");
 
 let trending = [];
 let trendingTv = [];
@@ -124,5 +125,9 @@ window.addEventListener("load", FetchTREN(), FetchPeople(), FetchTV());
 TVswitch.addEventListener("click", (e) => {
   trending = trendingTv;
   FetchTV();
-  console.log("f");
+});
+
+Tend.addEventListener("click", (e) => {
+  trendingTV = trending;
+  FetchTREN();
 });

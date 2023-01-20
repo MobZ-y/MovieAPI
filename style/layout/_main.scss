@@ -1,12 +1,19 @@
 
 //*******MOVIES TREN + card effect for TV & Movies************
-.movies-trending {
-  margin: 30px auto;}
-  
-  .card{
+.movies-trending.tv-trending  {
+  margin: 30px auto;
+}
+
+h4{
+  margin-left: 150px;
+  margin-top: 20px;
+  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.card{
     margin: 10px;
     width: 275px;
-  }
+ 
 
   .card-popular {
     color: rgb(53, 53, 53);
@@ -29,14 +36,17 @@
       justify-content: center;
       font-size: 10px;
       position: relative;
+   
 
       .name {
         font-weight: 700;
         font-weight: 600;
         word-wrap: break-word;
+        
       }
     }
   }
+}
 
 //******Carrousel tendances*******//
   .carousel {
@@ -58,30 +68,28 @@
   }
 
 ///*******************Carrousel TV*****************///
-.carouseltv {
-  width: 80%;
-  margin: 0 auto;
-  overflow: hidden;
-}
-.trendingTv {
-  display: flex;
-  width: 100%;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  overflow-x: scroll;
-}
-.slide {
-  width: 100%;
-  scroll-snap-align: start;
-}
+// .carouseltv {
+//   width: 80%;
+//   margin: 0 auto;
+//   overflow: hidden;
+// }
+// .trendingTv {
+//   display: flex;
+//   width: 100%;
+//   scroll-snap-type: x mandatory;
+//   -webkit-overflow-scrolling: touch;
+//   overflow-x: scroll;
+// }
+// .slide {
+//   width: 100%;
+//   scroll-snap-align: start;
+// }
 
 
-.tv-trending {
-  margin: 30px auto;
-}
 //****CANVAS****/
 #canvas {
   border: 1px solid black;
+  color: azure;
   border-radius: 150px;
   position: absolute;
   top: -29px;
@@ -89,6 +97,9 @@
   z-index: 1000;
   width: 30px;
   height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -107,4 +118,9 @@
   background-color: rgb(207, 2, 2);
 }
 
-//*************Utility******************/
+//*************Utility******************
+
+
+.Switch{
+  display: flex;
+}

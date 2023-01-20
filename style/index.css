@@ -20,7 +20,7 @@ body {
 
 a {
   text-decoration: none;
-  color: rgb(243, 243, 243);
+  color: rgb(0, 0, 0);
 }
 
 .wrapper {
@@ -30,7 +30,7 @@ a {
 
 header {
   border-bottom: 1px solid rgb(88, 88, 88);
-  background: rgb(77, 77, 77);
+  background: rgb(255, 254, 254);
 }
 
 header li {
@@ -62,34 +62,40 @@ header li:hover .sub-menu {
   width: 200px;
 }
 
-.movies-trending {
+.movies-trending.tv-trending {
   margin: 30px auto;
+}
+
+h4 {
+  margin-left: 150px;
+  margin-top: 20px;
+  font-size: 25px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .card {
   margin: 10px;
   width: 275px;
 }
-
-.card-popular {
+.card .card-popular {
   color: rgb(53, 53, 53);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.card-popular .profile-popular {
+.card .card-popular .profile-popular {
   width: 150px;
   height: 225px;
 }
-.card-popular .profile-popular img {
+.card .card-popular .profile-popular img {
   height: 100%;
   width: 100%;
   border-radius: 10px;
 }
-.card-popular .profile-meta {
+.card .card-popular .profile-meta {
   justify-content: center;
   font-size: 10px;
   position: relative;
 }
-.card-popular .profile-meta .name {
+.card .card-popular .profile-meta .name {
   font-weight: 700;
   font-weight: 600;
   word-wrap: break-word;
@@ -113,32 +119,9 @@ header li:hover .sub-menu {
   scroll-snap-align: start;
 }
 
-.carouseltv {
-  width: 80%;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.trendingTv {
-  display: flex;
-  width: 100%;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  overflow-x: scroll;
-}
-
-.slide {
-  width: 100%;
-  scroll-snap-align: start;
-}
-
-.tv-trending {
-  margin: 30px auto;
-}
-
 #canvas {
   border: 1px solid black;
+  color: azure;
   border-radius: 150px;
   position: absolute;
   top: -29px;
@@ -146,6 +129,9 @@ header li:hover .sub-menu {
   z-index: 1000;
   width: 30px;
   height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .visiblity {
@@ -160,6 +146,10 @@ header li:hover .sub-menu {
   background-color: rgb(207, 2, 2);
 }
 
+.Switch {
+  display: flex;
+}
+
 .search {
   display: flex;
   justify-content: center;
@@ -167,7 +157,7 @@ header li:hover .sub-menu {
 }
 .search .Details {
   margin: 20px;
-  height: 340px;
+  height: 350px;
   overflow: hidden;
 }
 .search .Details h3 {
@@ -187,13 +177,13 @@ header li:hover .sub-menu {
   width: 600px;
   border-radius: 15px;
   height: 10px;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 button {
   height: 50px;
   width: 100px;
-  margin-top: 200px;
+  margin-top: 100px;
   border-radius: 15px;
   cursor: pointer;
 }
@@ -202,6 +192,6 @@ button {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 400px;
+  height: 300px;
   background: url(/img/bladerunner2049.jpg) center/cover;
 }/*# sourceMappingURL=index.css.map */

@@ -3,8 +3,10 @@ const content = document.querySelector(".content");
 const btn = document.querySelector("button");
 const topMovie = document.querySelector(".movies-trending");
 const inputSearch = document.getElementById("inputSearch");
+const TVswitch = document.getElementById("TV");
 
 let trending = [];
+let trendingTv = [];
 let peoplesearch = "Ana de Armas";
 let idPeople = "";
 let People = "";
@@ -94,8 +96,9 @@ function FetchDisplay() {
     }">${
           info.vote_average === 0
             ? "unrated"
-            : (info.vote_average * 10).toFixed(1)
-        }</div></div>
+            : Math.floor(info.vote_average * 10).toFixed(0)
+        }</div>
+</div>
     </div>
     </div>
     </div>
@@ -104,4 +107,22 @@ function FetchDisplay() {
     .join("");
 }
 
-window.addEventListener("load", FetchTREN(), FetchPeople());
+async function FetchTV() {
+  await fetch(
+    "https://api.themoviedb.org/3/tv/popular?api_key=dc4fa11dbb0888468121f0e93ac98077"
+  )
+    .then((res) => res.json())
+    .then((data) => (trendingTv = data.results));
+
+  FetchDisplay();
+  console.log(trendingTv);
+  // FetchDisplayTv();
+}
+
+window.addEventListener("load", FetchTREN(), FetchPeople(), FetchTV());
+
+TVswitch.addEventListener("click", (e) => {
+  trending = trendingTv;
+  FetchTV();
+  console.log("f");
+});

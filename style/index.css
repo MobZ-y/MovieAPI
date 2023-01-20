@@ -152,6 +152,23 @@ header li:hover .sub-menu {
 .Switch h3 {
   padding: 10px;
 }
+.Switch h3:hover li:not(:hover) {
+  background: none;
+  color: white;
+}
+.Switch h3:first-child {
+  background: white;
+  border-radius: 50px;
+  color: black;
+}
+.Switch h3:hover {
+  background: white;
+  border-radius: 50px;
+  color: black;
+}
+.Switch h3:hover a {
+  color: black;
+}
 
 .search {
   display: flex;

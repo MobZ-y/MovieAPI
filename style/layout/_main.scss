@@ -108,19 +108,10 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   border: solid 2px black;
 
-  &:hover h3:not(:hover) {
-    background: none;
-    color: rgb(0, 0, 0);
-  }
-
+  
   h3 {
     padding: 10px;
 
-    &:first-child {
-      background: white;
-      border-radius: 50px;
-      color: black;
-    }
 
     &:hover {
       background: white;

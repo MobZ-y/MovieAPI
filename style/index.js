@@ -46,6 +46,7 @@ function FetchDisplayPeople() {
           People.profile_path
         }" alt="drapeau" id="pp"> 
         <p>Age :${People.birthday - date1} </p>
+        <p>Née :${People.birthday} </p>
     </div>
         <div class="Details">
         <h3>${People.name}</h3>
@@ -63,7 +64,6 @@ inputSearch.addEventListener("input", (e) => {
 
 btn.addEventListener("click", () => {
   topMovie.classList.add("visiblity");
-  topTv.classList.add("visiblity");
 
   FetchDisplayPeople();
 });

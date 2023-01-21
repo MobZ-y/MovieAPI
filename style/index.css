@@ -62,7 +62,7 @@ header li:hover .sub-menu {
   width: 200px;
 }
 
-.movies-trending.tv-trending {
+.movies-trending {
   margin: 30px auto;
 }
 
@@ -108,6 +108,27 @@ header li:hover .sub-menu {
   overflow-x: scroll;
 }
 .carousel .slide {
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+.trendingOnPerson {
+  margin: 30px auto;
+}
+.trendingOnPerson .carouselPerson {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.trendingOnPerson .carouselPerson .trendingPerson {
+  display: flex;
+  width: 100%;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+}
+.trendingOnPerson .carouselPerson .slide {
   width: 100%;
   scroll-snap-align: start;
 }

@@ -7,12 +7,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style/index.css" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header>
@@ -24,7 +24,11 @@
           <li>
             <a href="">Films</a>
             <ul class="sub-menu">
-              <li><a href="/FilmsPopulaires/filmsPopulaires.html">Films du Moment</a></li>
+              <li>
+                <a href="/FilmsPopulaires/filmsPopulaires.html"
+                  >Films du Moment</a
+                >
+              </li>
               <li><a href="/Artistes/artistes.html">Films à venir</a></li>
             </ul>
           </li>
@@ -38,42 +42,48 @@
       </nav>
     </header>
 
-<main>
-    <div class="filter-container">
-      <h2>Bienvenue !</h2>
-      <input type="text" id="inputSearch" placeholder="Rechercher, acteurs, réalisateur" />
-     <button>
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-    </div>
-    <div class="content"></div>
-    <div class="movies-trending">
-      <div class="Switch">
-        <h3 id="TendancesHover">
-      <a href="" id="Tend">Tendances</a>
-    </h3>
-    <h3>
-      <a href="" id="TV">Tendances TV</a>
-    </h3>
-    </div>
-      <div class="carousel">
-        <div class="trending"></div>
+    <main>
+      <div class="filter-container">
+        <div class="Titlte-filter-container"><h2>Bienvenue !</h2></div>
+        <div class="input-search">
+          <input
+            type="text"
+            id="inputSearch"
+            placeholder="Rechercher, acteurs, réalisateur"
+          />
+          <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
       </div>
-    </div>
-    <div class="trendingOnPerson">
-      <div class="Switch">
-        <h3 id="TendancesHoverPerson">
-      <a href="" id="Week">Semaine</a>
-    </h3>
-    <h3>
-      <a href="" id="Day">Jour</a>
-    </h3>
-    </div>
-      <div class="carouselPerson scrollbar">
-        <div class="trendingPerson"></div>
+      <div class="content"></div>
+      <div class="movies-trending">
+        <div class="Switch">
+          <h3 id="TendancesHover">
+            <a href="" id="Tend">Tendances</a>
+          </h3>
+          <h3>
+            <a href="" id="TV">Tendances TV</a>
+          </h3>
+        </div>
+        <div class="carousel">
+          <div class="trending"></div>
+        </div>
       </div>
-    </div>
-  </main>
+      <div class="trendingOnPerson">
+        <div class="Switch">
+          <h3 id="TendancesHoverPerson">
+            <a href="" id="Week">Semaine</a>
+          </h3>
+          <h3>
+            <a href="" id="Day">Jour</a>
+          </h3>
+        </div>
+        <div class="carouselPerson">
+          <div class="trendingPerson"></div>
+        </div>
+      </div>
+    </main>
     <script src="./style/index.js"></script>
   </body>
 </html>

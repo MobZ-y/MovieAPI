@@ -1,56 +1,51 @@
-
-
-*{
+* {
   box-sizing: border-box;
-
 }
 
-a{
-    text-decoration: none;
-    color: black;
-  }
+a {
+  text-decoration: none;
+  color: black;
+}
 
-
-
-.wrapper{
+.wrapper {
   margin: 0 auto;
   width: 1000px;
+  height: 80px;
 }
 
-header{
+header {
   background: #1e3d59;
 
-  a{
+  a {
     text-decoration: none;
     color: rgb(245, 244, 244);
   }
 }
-header li{
+header li {
   display: inline-block;
   vertical-align: top;
   position: relative;
   z-index: 100;
 }
 
-header li a{
+header li a {
   display: block;
   padding: 20px;
 }
 
-header li a:hover{
-background: rgb(51, 51, 51);
-color: #fff;
+header li a:hover {
+  background: rgb(51, 51, 51);
+  color: #fff;
 }
 
-header li:hover .sub-menu{
+header li:hover .sub-menu {
   display: block;
   background: rgb(61, 61, 61);
-  }
+}
 
-.sub-menu{
+.sub-menu {
   display: none;
   position: absolute;
   background-color: aqua;
   width: 200px;
 }
-

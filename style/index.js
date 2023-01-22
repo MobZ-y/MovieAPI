@@ -2,6 +2,7 @@ const tren = document.querySelector(".trending");
 const content = document.querySelector(".content");
 const btn = document.querySelector("button");
 const topMovie = document.querySelector(".movies-trending");
+const topPerson = document.querySelector(".trendingOnPerson");
 const inputSearch = document.getElementById("inputSearch");
 const TVswitch = document.getElementById("TV");
 const TendancesSwitch = document.getElementById("Tend");
@@ -69,6 +70,7 @@ inputSearch.addEventListener("input", (e) => {
 
 btn.addEventListener("click", () => {
   topMovie.classList.add("visiblity");
+  topPerson.classList.add("visiblity");
 
   FetchDisplayPeople();
 });
@@ -188,3 +190,15 @@ WeekSwitch.addEventListener('click', (e) =>{
   SwitchPerson  = "week";
   FetchDiscovery()
 });
+
+//!******************************************************************* DISCOVER
+async function FetchDiscoveryT() {
+  await fetch(
+    "https://api.themoviedb.org/3/trending/movie/day?api_key=dc4fa11dbb0888468121f0e93ac98077"
+  )
+    .then((res) => res.json())
+    .then((data) =>  console.log(data));
+
+
+}
+FetchDiscoveryT() 

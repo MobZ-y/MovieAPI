@@ -11,7 +11,7 @@ li {
 }
 
 body {
-  background-color: rgb(154, 201, 255);
+  background-color: rgb(230, 230, 230);
 }
 
 a {
@@ -30,11 +30,11 @@ a {
 
 header {
   border-bottom: 1px solid #eee;
-  background: rgb(0, 0, 136);
+  background: rgb(255, 255, 255);
 }
 header a {
   text-decoration: none;
-  color: rgb(243, 243, 243);
+  color: rgb(3, 3, 3);
 }
 
 header li {

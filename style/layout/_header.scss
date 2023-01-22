@@ -2,12 +2,15 @@
 
 *{
   box-sizing: border-box;
+
 }
 
 a{
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-}
+    text-decoration: none;
+    color: black;
+  }
+
+
 
 .wrapper{
   margin: 0 auto;
@@ -15,8 +18,12 @@ a{
 }
 
 header{
-  border-bottom: 1px solid rgb(88, 88, 88);
-  background: rgb(255, 254, 254);
+  background: #1e3d59;
+
+  a{
+    text-decoration: none;
+    color: rgb(245, 244, 244);
+  }
 }
 header li{
   display: inline-block;

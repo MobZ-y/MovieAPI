@@ -45,7 +45,13 @@ button {
 .filter-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
   height: 300px;
   background: url(/img/bladerunner2049.jpg) center/cover;
+
+  h2{
+    font-size: 70px;
+  
+  }
 }

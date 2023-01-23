@@ -1,9 +1,5 @@
 const tren = document.querySelector(".trending");
-const content = document.querySelector(".content");
 const btn = document.querySelector("button");
-const topMovie = document.querySelector(".movies-trending");
-const topPerson = document.querySelector(".trendingOnPerson");
-const inputSearch = document.getElementById("inputSearch");
 const TVswitch = document.getElementById("TV");
 const TendancesSwitch = document.getElementById("Tend");
 const TendancesPerson = document.querySelector(".trendingPerson");
@@ -13,67 +9,10 @@ const WeekSwitch = document.getElementById("Week");
 
 let trending = [];
 let trendingTv = [];
-let peoplesearch = "Ana de Armas";
-let idPeople = "";
-let People = "";
-let date1 = new Date();
 let SwitchPerson = "week";
 let TrendingPerson = [];
 
-async function FetchPeople() {
-  await fetch(
-    "https://api.themoviedb.org/3/search/person?api_key=dc4fa11dbb0888468121f0e93ac98077&language=en-US&query=" +
-      peoplesearch
-  )
-    .then((res) => res.json())
-    .then((data) => (idPeople = data.results[0].id));
 
-  console.log(idPeople);
-  FetchPeopleDetails();
-}
-
-async function FetchPeopleDetails() {
-  await fetch(
-    "https://api.themoviedb.org/3/person/" +
-      idPeople +
-      "?api_key=dc4fa11dbb0888468121f0e93ac98077&language=en-US&query="
-  )
-    .then((res) => res.json())
-    .then((data) => (People = data));
-
-  console.log(People);
-}
-
-function FetchDisplayPeople() {
-  content.innerHTML = People = `
-        <div class="search">
-        <div class="Profile">
-        <img src="https://image.tmdb.org/t/p/w500${
-          People.profile_path
-        }" alt="drapeau" id="pp"> 
-        <p>Age :${People.birthday - date1} </p>
-        <p>Née :${People.birthday} </p>
-    </div>
-        <div class="Details">
-        <h3>${People.name}</h3>
-        <p>${People.biography}</p>
-        </div>
-        </div>
-      `;
-  id = "";
-}
-
-inputSearch.addEventListener("input", (e) => {
-  peoplesearch = e.target.value;
-  FetchPeople();
-});
-
-btn.addEventListener("click", () => {
-  topMovie.classList.add("visiblity");
-  topPerson.classList.add("visiblity");
-
-  FetchDisplayPeople();
-});
 
 async function FetchTREN() {
   await fetch(
@@ -127,7 +66,7 @@ async function FetchTV() {
   // FetchDisplayTv();
 }
 
-window.addEventListener("load", FetchTREN(), FetchPeople(), FetchTV(), FetchDiscovery());
+window.addEventListener("load", FetchTREN(), FetchTV(), FetchDiscovery());
 
 TVswitch.addEventListener("click", (e) => {
   e.preventDefault();

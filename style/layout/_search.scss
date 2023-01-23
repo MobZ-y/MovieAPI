@@ -1,11 +1,17 @@
 .content {
   width: 100%;
 
+  .search-wrap{
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .search {
     display: flex;
-    justify-content: center;
-    padding: 380px;
-    padding-top: 70px;
+  width: 100%;
+
 
     .Details {
       margin: 20px;

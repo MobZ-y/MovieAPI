@@ -182,11 +182,15 @@ header li:hover .sub-menu {
 .content {
   width: 100%;
 }
+.content .search-wrap {
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .content .search {
   display: flex;
-  justify-content: center;
-  padding: 380px;
-  padding-top: 70px;
+  width: 100%;
 }
 .content .search .Details {
   margin: 20px;

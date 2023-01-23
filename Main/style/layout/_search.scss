@@ -1,7 +1,7 @@
 .content {
   width: 100%;
 
-  .search-wrap{
+  .Content-uppper{
     width: 60%;
     position: absolute;
     left: 50%;
@@ -11,6 +11,7 @@
   .search {
     display: flex;
   width: 100%;
+  margin-top: 30px;
 
 
     .Details {
@@ -34,6 +35,30 @@
     }
   }
 }
+
+//****************CAROUSEL SEARCH*******///
+.lower-content-Carousel{
+  margin: 30px auto;
+  
+  .carousel{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .search-carousel {
+      display: flex;
+      width: 100%;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      overflow-x: scroll;
+    }
+    .slide {
+      width: 100%;
+      scroll-snap-align: start;
+    }
+  }
+}
+///*****************************************************//
 
 #inputSearch {
   padding: 20px;

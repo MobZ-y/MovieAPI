@@ -1,9 +1,9 @@
-const content = document.querySelector(".content");
+const lowercontent = document.querySelector(".lower-content");
 const filterContainer = document.querySelector(".filter-container")
 const topMovie = document.querySelector(".movies-trending");
 const topPerson = document.querySelector(".trendingOnPerson");
 const inputSearch = document.getElementById("inputSearch");
-const Credits = document.querySelector(".Credits");
+const searchCarousel = document.querySelector(".search-carousel");
 
 let peoplesearch = "Ana de Armas";
 let idPeople = "";
@@ -39,7 +39,7 @@ function FetchDisplayPeople() {
   let age = ~~((Date.now() - new Date(birthday)) / 31557600000);
 
 
-  content.innerHTML = People = `
+  lowercontent.innerHTML = People = `
   <div class="search-wrap">
           <div class="search">
           <div class="Profile">
@@ -63,7 +63,7 @@ function FetchDisplayPeople() {
 inputSearch.addEventListener("input", (e) => {
   peoplesearch = e.target.value;
   FetchPeople();
-  FetchCreditMovies()
+
 });
 
 btn.addEventListener("click", () => {
@@ -72,6 +72,7 @@ btn.addEventListener("click", () => {
   filterContainer.classList.add("visiblity");
 
   FetchDisplayPeople();
+  FetchCreditMovies()
 });
 
 window.addEventListener("load", FetchPeople(),);
@@ -81,7 +82,7 @@ window.addEventListener("load", FetchPeople(),);
 
 async function FetchCreditMovies() {
   await fetch(
-    "https://api.themoviedb.org/3/person/224513/movie_credits?api_key=dc4fa11dbb0888468121f0e93ac98077&language=en-US"
+    "https://api.themoviedb.org/3/person/" +idPeople+ "/movie_credits?api_key=dc4fa11dbb0888468121f0e93ac98077&language=en-US"
   )
     .then((res) => res.json())
     .then((data) =>  Credit = data.cast);
@@ -92,7 +93,7 @@ console.log(Credit)
 }
 
 function DisplayCarousel() {
-  Credits.innerHTML =Credit.map(
+  searchCarousel.innerHTML =Credit.map(
     (info) =>
       `
   <div class="card">

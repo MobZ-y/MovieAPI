@@ -182,7 +182,7 @@ header li:hover .sub-menu {
 .content {
   width: 100%;
 }
-.content .search-wrap {
+.content .Content-uppper {
   width: 60%;
   position: absolute;
   left: 50%;
@@ -191,6 +191,7 @@ header li:hover .sub-menu {
 .content .search {
   display: flex;
   width: 100%;
+  margin-top: 30px;
 }
 .content .search .Details {
   margin: 20px;
@@ -207,6 +208,27 @@ header li:hover .sub-menu {
 .content .search #pp {
   min-height: 375px;
   height: 375px;
+}
+
+.lower-content-Carousel {
+  margin: 30px auto;
+}
+.lower-content-Carousel .carousel {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.lower-content-Carousel .carousel .search-carousel {
+  display: flex;
+  width: 100%;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+}
+.lower-content-Carousel .carousel .slide {
+  width: 100%;
+  scroll-snap-align: start;
 }
 
 #inputSearch {

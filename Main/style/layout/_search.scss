@@ -50,13 +50,18 @@
       width: 100%;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
-      overflow-x: scroll;
+      overflow-x: none;
     }
+
     .slide {
       width: 100%;
       scroll-snap-align: start;
     }
   }
+}
+
+.visibleScroll{
+  overflow-x: scroll !important;
 }
 ///*****************************************************//
 

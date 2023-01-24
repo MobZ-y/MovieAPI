@@ -32,19 +32,15 @@ function FetchDisplay() {
     <div class="card">
     <div class="card-popular">
     <div class="profile-popular">
-    <img src="https://image.tmdb.org/t/p/w500${
-      info.poster_path
-    }" alt="photo de ${info.name}" > 
+    <img src="${info.poster_path ? 'https://image.tmdb.org/t/p/w500' + info.poster_path : '/assets/img/nopict.webp'}" alt="photo de ${info.title}">
 </div>
 <div class="profile-meta">
     <p class="name">${info.name === undefined ? info.title : info.name}</p>
     <div id="canvas" class="${
-      info.vote_average === 0 ? "" : info.vote_average > 6 ? "green" : "red"
-    }">${
-          info.vote_average === 0
-            ? "unrated"
-            : Math.floor(info.vote_average * 10).toFixed(0)
-        }</div>
+    info.vote_average === 0 ? "grey" : info.vote_average > 6 ? "green" : 
+    (info.vote_average >= 4 && info.vote_average < 6) ? "orange" : "red"
+  }">${info.vote_average === 0? "": Math.floor(info.vote_average * 10).toFixed(0)}</div>
+</div>
 </div>
     </div>
     </div>
@@ -62,7 +58,7 @@ async function FetchTV() {
     .then((data) => (trendingTv = data.results));
 
   FetchDisplay();
-  console.log(trendingTv);
+
   // FetchDisplayTv();
 }
 
@@ -87,7 +83,6 @@ async function FetchDiscovery() {
     .then((res) => res.json())
     .then((data) => trendingPerson = data.results);
 
-    console.log(trendingPerson)
 
     DisplayDiscovery()
 
@@ -131,13 +126,13 @@ WeekSwitch.addEventListener('click', (e) =>{
 });
 
 //!******************************************************************* DISCOVER
-async function FetchDiscoveryT() {
-  await fetch(
-    "https://api.themoviedb.org/3/trending/movie/day?api_key=dc4fa11dbb0888468121f0e93ac98077"
-  )
-    .then((res) => res.json())
-    .then((data) =>  console.log(data));
+// async function FetchDiscoveryT() {
+//   await fetch(
+//     "https://api.themoviedb.org/3/trending/movie/day?api_key=dc4fa11dbb0888468121f0e93ac98077"
+//   )
+//     .then((res) => res.json())
+//     .then((data) =>  console.log(data));
 
 
-}
-FetchDiscoveryT() 
+// }
+// FetchDiscoveryT() 

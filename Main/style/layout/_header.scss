@@ -10,11 +10,12 @@ a {
 .wrapper {
   margin: 0 auto;
   width: 1000px;
-  height: 80px;
+
 }
 
 header {
   background: #1e3d59;
+  
 
   a {
     text-decoration: none;
@@ -26,6 +27,7 @@ header li {
   vertical-align: top;
   position: relative;
   z-index: 100;
+  
 }
 
 header li a {
